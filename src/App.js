@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import pic1 from "./pic-1.png";
+import pic2 from "./pic-2.jpg";
+import pic3 from "./pic-3.jpg";
+import pic4 from "./pic-4.jpg";
+import pic5 from "./pic-5.jpg";
 function App() {
+  const slides = [
+    { url: pic1, title: "1" },
+    { url: pic2, title: "2" },
+    { url: pic3, title: "3" },
+    { url: pic4, title: "4" },
+    { url: pic5, title: "5" },
+  ];
+
+  const containerStyles = {
+    width: "1380px",
+    height: "550px",
+    margin: "0 auto",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div style={containerStyles}>
+        <Navbar></Navbar>
+        <Home slides={slides} parentWidth={1500}></Home>
+      </div>
+    </>
   );
 }
-
 export default App;

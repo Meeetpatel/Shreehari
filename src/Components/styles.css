@@ -1,0 +1,10 @@
+.nav-link {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 22px;
+}
+.nav-link:hover {
+border-bottom: rgb(203, 209, 15) 2px solid ;
+
+}
+
+     
