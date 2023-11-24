@@ -19,6 +19,7 @@ const Home = ({ slides, parentWidth }) => {
   const slideStyles = {
     width: "100%",
     height: "100%",
+    display: "flex",
     borderRadius: "10px",
     backgroundPosition: "center",
     overflow: "hidden",
@@ -83,7 +84,7 @@ const Home = ({ slides, parentWidth }) => {
     }
     timerRef.current = setTimeout(() => {
       goToNext();
-    }, 2000);
+    }, 4000);
     return () => clearTimeout(timerRef.current);
   }, [goToNext]);
 

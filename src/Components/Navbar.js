@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "./logo.png"; // Replace "Logo.png" with the actual filename of your logo
+import logo from "./logo.png";
 import "./styles.css";
 import logo2 from "./logo2.jpg";
+
 export default function Navbar() {
   return (
     <div>
@@ -18,8 +19,8 @@ export default function Navbar() {
             <img
               src={logo}
               alt="Logo"
-              height="100"
-              width="500"
+              height="auto" // Adjusted for responsive design
+              width="100%" // Adjusted for responsive design
               className="d-inline-block align-middle"
             />
           </a>
