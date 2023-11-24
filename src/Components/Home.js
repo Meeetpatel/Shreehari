@@ -18,6 +18,7 @@ const Home = ({ slides, parentWidth }) => {
 
   const slideStyles = {
     width: "100%",
+
     height: "100%",
     display: "flex",
     borderRadius: "10px",

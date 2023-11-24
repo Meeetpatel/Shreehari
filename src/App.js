@@ -24,7 +24,7 @@ function App() {
     <>
       <div style={containerStyles}>
         <Navbar></Navbar>
-        <Home slides={slides} parentWidth={1500}></Home>
+        <Home class="responsive" slides={slides} parentWidth={1500}></Home>
       </div>
     </>
   );
