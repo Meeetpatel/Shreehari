@@ -4,7 +4,7 @@ import "./styles.css";
 const HIW = () => {
   const containerStyles = {
     height: "70vh", // Adjusted for full viewport height
-    width: "1500px",
+    width: "90vh",
     background: `url(${pic5})`, // Replace with your image URL
     backgroundSize: "cover",
     backgroundPosition: "center",

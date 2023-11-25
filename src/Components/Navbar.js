@@ -47,7 +47,7 @@ export default function Navbar({ slides, parentWidth }) {
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <Link
-                    className="nav-link active"
+                    className="nav-link ms-5"
                     onClick={() => setShowHome(true)}
                     to="/"
                   >
