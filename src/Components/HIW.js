@@ -11,7 +11,7 @@ import bg4 from "../bg4.jpg";
 import bg5 from "../bg5.jpg";
 const HIW = () => {
   const containerStyles = {
-    height: "100vh", // Adjusted for full viewport height
+    height: "50vh", // Adjusted for full viewport height
     width: "100%",
     border: " 2px solid #F0F8FF ",
     background: `url(${bg1})`, // Replace with your image URL
@@ -20,7 +20,7 @@ const HIW = () => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    color: "black", // Adjust the text color
+    color: "olive", // Adjust the text color
   };
 
   const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()]);
@@ -40,8 +40,8 @@ const HIW = () => {
               <img
                 src={before}
                 border=" 2px solid #F0F8FF "
-                width="50%"
-                height="90%"
+                width="80%"
+                height="105%"
                 alt="before"
               />
             </div>
@@ -49,8 +49,8 @@ const HIW = () => {
               <img
                 src={after}
                 border=" 2px solid #F0F8FF "
-                width="50%"
-                height="90%"
+                width="80%"
+                height="105%"
                 alt="after"
               />
             </div>
@@ -58,18 +58,18 @@ const HIW = () => {
         </div>
         <div>
           <h1 className="process-title">STEP 1</h1>
-          <h1 className="process-description">
+          <p className="process-description">
             Contact Us to schedule a Meeting With us in person.
-          </h1>
+          </p>
         </div>
       </div>
       <div className="process">
         <div>
           <h1 className="process-title">STEP 2</h1>
-          <h1 className="process-description">
+          <p className="process-description">
             Tell us all about your dream home. We’ll get to work on bringing it
             to life.
-          </h1>
+          </p>
         </div>
         <img
           width="40%"
@@ -89,18 +89,18 @@ const HIW = () => {
         />
         <div>
           <h1 className="process-title">STEP 3</h1>
-          <h1 className="process-description">
+          <p className="process-description">
             Get an estimated Quote for your Residential or Work Space.
-          </h1>
+          </p>
         </div>
       </div>
       <div className="process">
         <div>
           <h1 className="process-title">STEP 4</h1>
-          <h1 className="process-description">
+          <p className="process-description">
             We will blow your mind with inspo and ideas for transforming your
             space.
-          </h1>
+          </p>
         </div>
         <img
           width="40%"
@@ -114,16 +114,16 @@ const HIW = () => {
         <img
           width="40%"
           border=" 2px solid #F0F8FF "
-          height="50%"
+          height="70%"
           src={bg5}
           alt="img"
         />
         <div>
           <h1 className="process-title">STEP 5</h1>
-          <h1 className="process-description">
+          <p className="process-description">
             Tell us which design ideas you vibe with, and we’ll add all the
             beautiful finishing touches.
-          </h1>
+          </p>
         </div>
       </div>
     </>
