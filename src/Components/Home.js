@@ -1,12 +1,11 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 
-const Home = ({ slides, parentWidth }) => {
+const Home = ({ slides, setShowHome }) => {
   const timerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Check if parentWidth is valid, otherwise default to a reasonable width
-  const validParentWidth =
-    parentWidth && !isNaN(parentWidth) ? parentWidth : 1500;
+  const validParentWidth = Math.min(window.innerWidth * 0.9, 1500);
 
   const sliderStyles = {
     height: "50vw", // Adjusted for responsive design
@@ -18,7 +17,6 @@ const Home = ({ slides, parentWidth }) => {
 
   const slideStyles = {
     width: "100%",
-
     height: "100%",
     display: "flex",
     borderRadius: "10px",
@@ -89,7 +87,7 @@ const Home = ({ slides, parentWidth }) => {
     return () => clearTimeout(timerRef.current);
   }, [goToNext]);
 
-  return (
+  return setShowHome ? (
     <div style={sliderStyles}>
       <div style={leftarrowStyle} onClick={goToPrevious}>
         &larr;
@@ -108,7 +106,7 @@ const Home = ({ slides, parentWidth }) => {
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Home;

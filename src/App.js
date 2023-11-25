@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import pic1 from "./pic-1.png";
@@ -6,6 +6,8 @@ import pic2 from "./pic-2.jpg";
 import pic3 from "./pic-3.jpg";
 import pic4 from "./pic-4.jpg";
 import pic5 from "./pic-5.jpg";
+import { BrowserRouter as Router } from "react-router-dom";
+
 function App() {
   const slides = [
     { url: pic1, title: "1" },
@@ -16,17 +18,19 @@ function App() {
   ];
 
   const containerStyles = {
-    width: "1380px",
+    width: "90vw", // Adjusted to 90% of the viewport width
     height: "550px",
     margin: "0 auto",
   };
+
   return (
     <>
       <div style={containerStyles}>
-        <Navbar></Navbar>
-        <Home class="responsive" slides={slides} parentWidth={1500}></Home>
+        <Navbar slides={slides}></Navbar>
+        <Home className="responsive" slides={slides}></Home>
       </div>
     </>
   );
 }
+
 export default App;
