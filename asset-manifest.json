@@ -1,20 +1,27 @@
 {
   "files": {
-    "main.css": "/Shreehari/static/css/main.67adbd7e.css",
-    "main.js": "/Shreehari/static/js/main.2891216d.js",
+    "main.css": "/Shreehari/static/css/main.a3f99d70.css",
+    "main.js": "/Shreehari/static/js/main.ce4ac6a8.js",
     "static/js/787.26072d3a.chunk.js": "/Shreehari/static/js/787.26072d3a.chunk.js",
+    "static/media/bedroom.jpg": "/Shreehari/static/media/bedroom.bdac8a511a9bfb13a355.jpg",
     "static/media/pic-4.jpg": "/Shreehari/static/media/pic-4.1b3266eb56d26f5efd9c.jpg",
+    "static/media/bg5.jpg": "/Shreehari/static/media/bg5.a77953ba87a7caf689aa.jpg",
     "static/media/pic-3.jpg": "/Shreehari/static/media/pic-3.459fb9ddd71d4e5b7ceb.jpg",
+    "static/media/bg1.jpeg": "/Shreehari/static/media/bg1.34fdd532ae3305014a72.jpeg",
     "static/media/pic-1.png": "/Shreehari/static/media/pic-1.d855bb01ad7d74dfd988.png",
     "static/media/pic-2.jpg": "/Shreehari/static/media/pic-2.692c9eea4e2bb34a052f.jpg",
+    "static/media/After.jpg": "/Shreehari/static/media/After.8f939e73937af750c31d.jpg",
     "static/media/pic-5.jpg": "/Shreehari/static/media/pic-5.cd96cb3566d5a51b3c12.jpg",
+    "static/media/Before.jpg": "/Shreehari/static/media/Before.f4144a5e08545cc0f05f.jpg",
+    "static/media/bg3.jpg": "/Shreehari/static/media/bg3.9edc5541b582c4d4bb6e.jpg",
+    "static/media/bg4.jpg": "/Shreehari/static/media/bg4.38399b52cb760cf5e415.jpg",
     "index.html": "/Shreehari/index.html",
-    "main.67adbd7e.css.map": "/Shreehari/static/css/main.67adbd7e.css.map",
-    "main.2891216d.js.map": "/Shreehari/static/js/main.2891216d.js.map",
+    "main.a3f99d70.css.map": "/Shreehari/static/css/main.a3f99d70.css.map",
+    "main.ce4ac6a8.js.map": "/Shreehari/static/js/main.ce4ac6a8.js.map",
     "787.26072d3a.chunk.js.map": "/Shreehari/static/js/787.26072d3a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67adbd7e.css",
-    "static/js/main.2891216d.js"
+    "static/css/main.a3f99d70.css",
+    "static/js/main.ce4ac6a8.js"
   ]
 }
