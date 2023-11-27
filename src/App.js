@@ -6,6 +6,7 @@ import pic2 from "./pic-2.jpg";
 import pic3 from "./pic-3.jpg";
 import pic4 from "./pic-4.jpg";
 import pic5 from "./pic-5.jpg";
+import "./Components/styles.css";
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
   return (
     <>
       <div style={containerStyles}>
-        <Navbar slides={slides}></Navbar>
+        <Navbar className="nav-bar" slides={slides}></Navbar>
         <Home className="responsive" slides={slides}></Home>
       </div>
     </>
