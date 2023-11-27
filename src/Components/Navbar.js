@@ -37,7 +37,7 @@ export default function Navbar({ slides, parentWidth }) {
             </a>
 
             <button
-              className="navbar-toggler custom-toggler d-inline-block"
+              className="navbar-toggler custom-toggler d-md-none d-inline-block"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"

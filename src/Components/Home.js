@@ -8,7 +8,7 @@ const Home = ({ slides, setShowHome }) => {
   const validParentWidth = Math.min(window.innerWidth * 0.9, 1500);
 
   const sliderStyles = {
-    height: "50vw", // Adjusted for responsive design
+    height: "60vw", // Adjusted for responsive design
     position: "relative",
     display: "flex",
     transition: "transform ease-out 0.3s",
