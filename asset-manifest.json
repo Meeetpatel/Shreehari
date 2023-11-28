@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.css": "/Shreehari/static/css/main.61279520.css",
-    "main.js": "/Shreehari/static/js/main.4c26c8a5.js",
+    "main.css": "/Shreehari/static/css/main.91019c62.css",
+    "main.js": "/Shreehari/static/js/main.46f9f64a.js",
     "static/js/787.26072d3a.chunk.js": "/Shreehari/static/js/787.26072d3a.chunk.js",
+    "static/media/contactimage.jpg": "/Shreehari/static/media/contactimage.a0924fb099b7abed620e.jpg",
     "static/media/bedroom.jpg": "/Shreehari/static/media/bedroom.bdac8a511a9bfb13a355.jpg",
-    "static/media/pic-4.jpg": "/Shreehari/static/media/pic-4.1b3266eb56d26f5efd9c.jpg",
-    "static/media/bg5.jpg": "/Shreehari/static/media/bg5.a77953ba87a7caf689aa.jpg",
-    "static/media/pic-3.jpg": "/Shreehari/static/media/pic-3.459fb9ddd71d4e5b7ceb.jpg",
+    "static/media/instagram.png": "/Shreehari/static/media/instagram.9045a73f8ea4605ecaee.png",
+    "static/media/pic-3.jpg": "/Shreehari/static/media/pic-3.1b3266eb56d26f5efd9c.jpg",
+    "static/media/pic-4.jpg": "/Shreehari/static/media/pic-4.459fb9ddd71d4e5b7ceb.jpg",
     "static/media/bg1.jpeg": "/Shreehari/static/media/bg1.34fdd532ae3305014a72.jpeg",
     "static/media/pic-1.png": "/Shreehari/static/media/pic-1.d855bb01ad7d74dfd988.png",
     "static/media/pic-2.jpg": "/Shreehari/static/media/pic-2.692c9eea4e2bb34a052f.jpg",
+    "static/media/bg5.jpeg": "/Shreehari/static/media/bg5.48e29d9bccbadb64f19e.jpeg",
     "static/media/After.jpg": "/Shreehari/static/media/After.8f939e73937af750c31d.jpg",
     "static/media/pic-5.jpg": "/Shreehari/static/media/pic-5.cd96cb3566d5a51b3c12.jpg",
+    "static/media/facebook.png": "/Shreehari/static/media/facebook.27e15bab1389dd245011.png",
     "static/media/Before.jpg": "/Shreehari/static/media/Before.f4144a5e08545cc0f05f.jpg",
     "static/media/bg4.jpg": "/Shreehari/static/media/bg4.38399b52cb760cf5e415.jpg",
     "static/media/bg3.jpg": "/Shreehari/static/media/bg3.7527fbd492e1487ebce8.jpg",
+    "static/media/email2.png": "/Shreehari/static/media/email2.fe1a05b1284f7d71d80d.png",
     "index.html": "/Shreehari/index.html",
-    "main.61279520.css.map": "/Shreehari/static/css/main.61279520.css.map",
-    "main.4c26c8a5.js.map": "/Shreehari/static/js/main.4c26c8a5.js.map",
+    "main.91019c62.css.map": "/Shreehari/static/css/main.91019c62.css.map",
+    "main.46f9f64a.js.map": "/Shreehari/static/js/main.46f9f64a.js.map",
     "787.26072d3a.chunk.js.map": "/Shreehari/static/js/787.26072d3a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61279520.css",
-    "static/js/main.4c26c8a5.js"
+    "static/css/main.91019c62.css",
+    "static/js/main.46f9f64a.js"
   ]
 }
