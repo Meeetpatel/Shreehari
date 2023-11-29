@@ -1,111 +1,141 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-
+import { Link } from "react-router-dom";
+import HIW from "./HIW";
+import Contact from "./Contact";
 const Home = ({ slides, setShowHome }) => {
   const timerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [sliderHeight, setSliderHeight] = useState(getSliderHeight());
 
-  // Check if parentWidth is valid, otherwise default to a reasonable width
-  const validParentWidth = Math.min(window.innerWidth * 0.9, 1500);
+  function getSliderHeight() {
+    const windowWidth = window.innerWidth;
+    return windowWidth <= 768 ? "100vh" : "45vw";
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSliderHeight(getSliderHeight());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleNextSlide = () => {
+      const isLastSlide = currentIndex === slides.length - 1;
+      const newIndex = isLastSlide ? 0 : currentIndex + 1;
+      setCurrentIndex(newIndex);
+    };
+
+    timerRef.current = setInterval(handleNextSlide, 4500);
+
+    return () => {
+      clearInterval(timerRef.current);
+    };
+  }, [currentIndex, slides]);
 
   const sliderStyles = {
-    height: "60vw", // Adjusted for responsive design
+    height: sliderHeight,
+    width: "98vw",
     position: "relative",
     display: "flex",
-    transition: "transform ease-out 0.3s",
     overflow: "hidden",
+    marginBottom: "10%",
   };
 
   const slideStyles = {
+    position: "absolute",
+    top: 0,
+    left: 0,
     width: "100%",
     height: "100%",
     display: "flex",
-    borderRadius: "10px",
+    alignItems: "center",
     backgroundPosition: "center",
     overflow: "hidden",
     backgroundSize: "cover",
-    backgroundImage: `url(${slides[currentIndex].url})`,
+    transition: "opacity 0.8s ease-in-out",
   };
-
-  const leftarrowStyle = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    left: "16px", // Adjusted for responsive design
-    fontSize: "30px", // Adjusted for responsive design
-    zIndex: 1,
-    cursor: "pointer",
-  };
-
-  const rightarrowStyle = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    right: "16px", // Adjusted for responsive design
-    fontSize: "30px", // Adjusted for responsive design
-    zIndex: 1,
-    cursor: "pointer",
-  };
-
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToNext = useCallback(() => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  }, [currentIndex, slides]);
 
   const slideStyleswithBackground = (slideIndex) => ({
     ...slideStyles,
     backgroundImage: `url(${slides[slideIndex].url})`,
-    width: `${validParentWidth}px`,
+    opacity: currentIndex === slideIndex ? 1 : 0,
+    zIndex: currentIndex === slideIndex ? 2 : 1,
   });
 
-  const getSlidesContainerStylesWithWidth = () => ({
-    display: "flex",
-    height: "100%",
-    transition: "transform ease-out 0.3s",
-    width: `${validParentWidth * slides.length}px`,
-    transform: `translateX(${-(currentIndex * validParentWidth)}px)`,
-  });
-
-  const slidesContainerOverflowStyles = {
-    overflow: "hidden",
-    height: "100%",
-  };
-
-  useEffect(() => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
-    timerRef.current = setTimeout(() => {
-      goToNext();
-    }, 4000);
-    return () => clearTimeout(timerRef.current);
-  }, [goToNext]);
+  const cardContents = [
+    {
+      text: "WE MAKE YOUR HOUSE A DREAM HOME",
+      buttonLabel: "GET STARTED",
+      buttonLink: "/HIW",
+      className: "card1",
+    },
+    {
+      text: "DESIGNING ROOMS YOU LOVE TO LIVE IN",
+      buttonLabel: "VIEW GALLERY",
+      buttonLink: "/Gallery",
+      className: "card2",
+    },
+    {
+      text: "DESIGN ADDS VALUE FASTER THEN IT ADDS COSTS",
+      buttonLabel: "GET A QUOTE",
+      buttonLink: "/Contact",
+      className: "card3",
+    },
+    {
+      text: "WE DESIGN, YOU LIVE",
+      buttonLabel: "HOW IT WORKS",
+      buttonLink: "/HIW",
+      className: "card4",
+    },
+    {
+      text: "DESIGNING HOMES FOR MORE THAN 15 YEARS",
+      buttonLabel: "ABOUT US",
+      buttonLink: "/About",
+      className: "card5",
+    },
+  ];
 
   return setShowHome ? (
-    <div style={sliderStyles}>
-      <div style={leftarrowStyle} onClick={goToPrevious}>
-        &larr;
-      </div>
-      <div style={rightarrowStyle} onClick={goToNext}>
-        &rarr;
-      </div>
-      <div style={slidesContainerOverflowStyles}>
-        <div style={getSlidesContainerStylesWithWidth()}>
-          {slides.map((_, slideIndex) => (
+    <>
+      <div style={sliderStyles}>
+        {slides.map((_, slideIndex) => (
+          <div key={slideIndex} style={slideStyleswithBackground(slideIndex)}>
             <div
-              key={slideIndex}
-              style={slideStyleswithBackground(slideIndex)}
-            ></div>
-          ))}
-        </div>
+              className={`${cardContents[slideIndex].className}`}
+              style={{
+                borderRadius: "15px",
+                marginLeft: "10%",
+              }}
+            >
+              <div
+                className="card-body"
+                style={{
+                  textAlign: "center",
+                  margin: "7%",
+                }}
+              >
+                <p className="card-text">"{cardContents[slideIndex].text}"</p>
+                <Link
+                  to={cardContents[slideIndex].buttonLink}
+                  className="cardbtn"
+                >
+                  {cardContents[slideIndex].buttonLabel}
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
+      <HIW></HIW>
+
+      <Contact></Contact>
+    </>
   ) : null;
 };
 

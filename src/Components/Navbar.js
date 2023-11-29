@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import logo from "./logo.png";
+import logo from "../Pictures/logo.png";
 import "./styles.css";
-import logo2 from "./logo2.jpg";
+import logo2 from "../Pictures/logo2.jpg";
 import {
   BrowserRouter as Router,
   NavLink,
@@ -10,10 +10,15 @@ import {
 } from "react-router-dom";
 import Home from "./Home";
 import HIW from "./HIW";
+import About from "./About";
+import Contact from "./Contact";
+import Gallery from "./Gallery";
 
 export default function Navbar({ slides, parentWidth }) {
   const [showHIW, setShowHIW] = useState(false);
-  const [showHome, setShowHome] = useState(false);
+  const [showHome, setShowHome] = useState(true);
+  const [showAbout, setShowAbout] = useState(false);
+  const [showGallery, setShowGallery] = useState(false);
   return (
     <Router>
       <div>
@@ -45,8 +50,9 @@ export default function Navbar({ slides, parentWidth }) {
               aria-expanded="true"
               aria-label="Toggle navigation"
             >
-              <span className="nav-link">Menu</span>
+              <span className="navbar-toggler-icon"></span>
             </button>
+
             <div
               className="collapse navbar-collapse justify-content-end"
               id="navbarNav"
@@ -62,9 +68,13 @@ export default function Navbar({ slides, parentWidth }) {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link hover-overlay ms-5" href="#">
+                  <NavLink
+                    className="nav-link hover-overlay ms-5"
+                    onClick={() => setShowGallery(true)}
+                    to="/Gallery"
+                  >
                     Gallery
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink
@@ -76,14 +86,18 @@ export default function Navbar({ slides, parentWidth }) {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link ms-5" href="#">
+                  <NavLink
+                    className="nav-link ms-5"
+                    onClick={() => setShowAbout(true)}
+                    to="/About"
+                  >
                     About
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link ms-5" href="#">
+                  <NavLink className="nav-link ms-5" to="/Contact">
                     Contact
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -103,6 +117,21 @@ export default function Navbar({ slides, parentWidth }) {
             }
           />
           <Route exact path="/HIW" element={<HIW />} />
+          <Route exact path="/Gallery" element={<Gallery />} />
+          <Route exact path="/About" element={<About />} />
+          <Route exact path="/Contact" element={<Contact />} />
+          <Route
+            path="*"
+            element={
+              <Home
+                slides={slides}
+                setShowHIW={setShowHIW}
+                parentWidth={1500}
+                setShowHome={setShowHome}
+                to="/"
+              />
+            }
+          />
         </Routes>
       </div>
     </Router>

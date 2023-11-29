@@ -1,13 +1,16 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
-import pic1 from "./pic-1.png";
-import pic2 from "./pic-2.jpg";
-import pic3 from "./pic-3.jpg";
-import pic4 from "./pic-4.jpg";
-import pic5 from "./pic-5.jpg";
+import pic1 from "./Pictures/pic-1.png";
+import pic2 from "./Pictures/pic-2.jpg";
+import pic3 from "./Pictures/pic-3.jpg";
+import pic4 from "./Pictures/pic-4.jpg";
+import pic5 from "./Pictures/pic-5.jpg";
 import "./Components/styles.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import Footer from "./Components/Footer";
+import HIW from "./Components/HIW";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
 
 function App() {
   const slides = [
@@ -19,17 +22,24 @@ function App() {
   ];
 
   const containerStyles = {
-    width: "90vw", // Adjusted to 90% of the viewport width
-    height: "550px",
-    margin: "0 auto",
-  };
+    width: "98vw",
 
+    margin: "0 auto",
+    marginBottom: "10px",
+  };
+  const footerStyles = {
+    marginTop: "auto",
+  };
   return (
     <>
       <div style={containerStyles}>
         <Navbar className="nav-bar" slides={slides}></Navbar>
+
         <Home className="responsive" slides={slides}></Home>
       </div>
+
+      <hr className="my-0" />
+      <Footer style={footerStyles}></Footer>
     </>
   );
 }
