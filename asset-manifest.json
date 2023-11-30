@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/Shreehari/static/css/main.f956e664.css",
-    "main.js": "/Shreehari/static/js/main.107ef3c8.js",
+    "main.css": "/Shreehari/static/css/main.88c595d7.css",
+    "main.js": "/Shreehari/static/js/main.ba7e9a6e.js",
     "static/js/787.26072d3a.chunk.js": "/Shreehari/static/js/787.26072d3a.chunk.js",
+    "static/media/pic-5.jpg": "/Shreehari/static/media/pic-5.5104379f1538eff65d06.jpg",
     "static/media/contactimage.jpg": "/Shreehari/static/media/contactimage.a0924fb099b7abed620e.jpg",
     "static/media/bedroom.jpg": "/Shreehari/static/media/bedroom.bdac8a511a9bfb13a355.jpg",
     "static/media/instagram.png": "/Shreehari/static/media/instagram.9045a73f8ea4605ecaee.png",
@@ -13,7 +14,6 @@
     "static/media/pic-2.jpg": "/Shreehari/static/media/pic-2.692c9eea4e2bb34a052f.jpg",
     "static/media/bg5.jpeg": "/Shreehari/static/media/bg5.48e29d9bccbadb64f19e.jpeg",
     "static/media/After.jpg": "/Shreehari/static/media/After.8f939e73937af750c31d.jpg",
-    "static/media/pic-5.jpg": "/Shreehari/static/media/pic-5.cd96cb3566d5a51b3c12.jpg",
     "static/media/facebook.png": "/Shreehari/static/media/facebook.27e15bab1389dd245011.png",
     "static/media/Before.jpg": "/Shreehari/static/media/Before.f4144a5e08545cc0f05f.jpg",
     "static/media/about.jpg": "/Shreehari/static/media/about.c3c83b347d7c2e8f1aa4.jpg",
@@ -57,12 +57,12 @@
     "static/media/img17.jpg": "/Shreehari/static/media/img17.ab7b5b58efabf1e74cee.jpg",
     "static/media/email2.png": "/Shreehari/static/media/email2.fe1a05b1284f7d71d80d.png",
     "index.html": "/Shreehari/index.html",
-    "main.f956e664.css.map": "/Shreehari/static/css/main.f956e664.css.map",
-    "main.107ef3c8.js.map": "/Shreehari/static/js/main.107ef3c8.js.map",
+    "main.88c595d7.css.map": "/Shreehari/static/css/main.88c595d7.css.map",
+    "main.ba7e9a6e.js.map": "/Shreehari/static/js/main.ba7e9a6e.js.map",
     "787.26072d3a.chunk.js.map": "/Shreehari/static/js/787.26072d3a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f956e664.css",
-    "static/js/main.107ef3c8.js"
+    "static/css/main.88c595d7.css",
+    "static/js/main.ba7e9a6e.js"
   ]
 }
