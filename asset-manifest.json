@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Shreehari/static/css/main.e24d771f.css",
-    "main.js": "/Shreehari/static/js/main.4e2009bf.js",
+    "main.css": "/Shreehari/static/css/main.f956e664.css",
+    "main.js": "/Shreehari/static/js/main.107ef3c8.js",
     "static/js/787.26072d3a.chunk.js": "/Shreehari/static/js/787.26072d3a.chunk.js",
     "static/media/contactimage.jpg": "/Shreehari/static/media/contactimage.a0924fb099b7abed620e.jpg",
     "static/media/bedroom.jpg": "/Shreehari/static/media/bedroom.bdac8a511a9bfb13a355.jpg",
@@ -57,12 +57,12 @@
     "static/media/img17.jpg": "/Shreehari/static/media/img17.ab7b5b58efabf1e74cee.jpg",
     "static/media/email2.png": "/Shreehari/static/media/email2.fe1a05b1284f7d71d80d.png",
     "index.html": "/Shreehari/index.html",
-    "main.e24d771f.css.map": "/Shreehari/static/css/main.e24d771f.css.map",
-    "main.4e2009bf.js.map": "/Shreehari/static/js/main.4e2009bf.js.map",
+    "main.f956e664.css.map": "/Shreehari/static/css/main.f956e664.css.map",
+    "main.107ef3c8.js.map": "/Shreehari/static/js/main.107ef3c8.js.map",
     "787.26072d3a.chunk.js.map": "/Shreehari/static/js/787.26072d3a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e24d771f.css",
-    "static/js/main.4e2009bf.js"
+    "static/css/main.f956e664.css",
+    "static/js/main.107ef3c8.js"
   ]
 }
