@@ -16,11 +16,7 @@ export default function Contact() {
         <Container className="mb-5" style={{ marginLeft: "10%" }}>
           <Row>
             <Col md={4}>
-              <img
-                src={contactimage}
-                alt="Left Image"
-                className="img-fluid contactlogo"
-              />
+              <img src={contactimage} className="img-fluid contactlogo" />
             </Col>
             <Col md={8} className="contactInfo" style={{ textAlign: "center" }}>
               <img src={logo} alt="Logo" className="img-fluid contactlogo1" />
@@ -45,6 +41,7 @@ export default function Contact() {
                     color: "rgb(52, 45, 45)",
                     marginRight: "17%",
                     marginTop: "5%",
+                    fontFamily: "PP Editorial New",
                   }}
                 >
                   +91 875 848 1541
@@ -65,6 +62,7 @@ export default function Contact() {
                     textDecoration: "none",
                     fontSize: "29px",
                     color: "rgb(52, 45, 45)",
+                    fontFamily: "PP Editorial New",
                   }}
                 >
                   PatelRajesh5570@gmail.com

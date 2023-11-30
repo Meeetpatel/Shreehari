@@ -13,12 +13,18 @@ import HIW from "./HIW";
 import About from "./About";
 import Contact from "./Contact";
 import Gallery from "./Gallery";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Navbar({ slides, parentWidth }) {
   const [showHIW, setShowHIW] = useState(false);
   const [showHome, setShowHome] = useState(true);
   const [showAbout, setShowAbout] = useState(false);
   const [showGallery, setShowGallery] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
+  const handleToggle = () => {
+    setExpanded(!expanded);
+  };
   return (
     <Router>
       <div>
@@ -31,7 +37,7 @@ export default function Navbar({ slides, parentWidth }) {
             className="d-sm-none d-md-inline d-inline-block align-middle"
           />
           <div className="container-fluid">
-            <a className="navbar-brand d-flex flex-column" to="/">
+            <a className="navbar-brand d-flex flex-column" href="/">
               <img
                 src={logo}
                 alt="Logo"
@@ -44,17 +50,14 @@ export default function Navbar({ slides, parentWidth }) {
             <button
               className="navbar-toggler custom-toggler d-md-none d-inline-block"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="true"
-              aria-label="Toggle navigation"
+              onClick={handleToggle}
             >
-              <span className="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon " />
             </button>
-
             <div
-              className="collapse navbar-collapse justify-content-end"
+              className={`collapse navbar-collapse justify-content-end ${
+                expanded ? "show" : ""
+              }`}
               id="navbarNav"
             >
               <ul className="navbar-nav">

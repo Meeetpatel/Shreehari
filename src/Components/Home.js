@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import HIW from "./HIW";
 import Contact from "./Contact";
+import "./styles.css";
 const Home = ({ slides, setShowHome }) => {
   const timerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);

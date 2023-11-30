@@ -5,16 +5,20 @@ import phone from "../Pictures/phone.jpg";
 import email from "../Pictures/email.jpg";
 import instagram from "../Pictures/instagram.png";
 import facebook from "../Pictures/facebook.png";
+import "./styles.css";
 const Footer = () => {
   return (
-    <footer className="footer bg-light text-dark text-center py-4">
+    <footer
+      style={{ backgroundColor: "black", color: "white" }}
+      className="footer text-center py-4"
+    >
       <div className="container">
         <div className="row">
           <div className="col-md-3 order-md-1 text-left order-2">
             <img src={phone} alt="phone" className="d-inline-block align-top" />
             <a
               style={{
-                color: "black",
+                color: "white",
                 marginLeft: "5%",
                 textDecoration: "none",
               }}
@@ -33,7 +37,7 @@ const Footer = () => {
             <a
               href="mailto: PatelRajesh5570@email.com"
               style={{
-                color: "black",
+                color: "white",
                 marginLeft: "5%",
                 textDecoration: "none",
               }}

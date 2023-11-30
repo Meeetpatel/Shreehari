@@ -36,6 +36,7 @@ import img34 from "./images/img34.jpg";
 import img35 from "./images/img35.jpg";
 import img36 from "./images/img36.jpg";
 import img0 from "./images/img0.jpg";
+import logo from "../Pictures/gallerylogo.png";
 export default function Gallery() {
   const imageArray = [
     {
@@ -197,6 +198,7 @@ export default function Gallery() {
 
   return (
     <>
+      <img src={logo} className=" d-flex mx-auto" />
       <div
         style={{
           marginLeft: "2%",

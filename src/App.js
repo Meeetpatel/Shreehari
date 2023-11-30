@@ -8,9 +8,6 @@ import pic4 from "./Pictures/pic-4.jpg";
 import pic5 from "./Pictures/pic-5.jpg";
 import "./Components/styles.css";
 import Footer from "./Components/Footer";
-import HIW from "./Components/HIW";
-import About from "./Components/About";
-import Contact from "./Components/Contact";
 
 function App() {
   const slides = [
