@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 import HIW from "./HIW";
 import Contact from "./Contact";
 import "./styles.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const Home = ({ slides, setShowHome }) => {
   const timerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sliderHeight, setSliderHeight] = useState(getSliderHeight());
 
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   function getSliderHeight() {
     const windowWidth = window.innerWidth;
     return windowWidth <= 768 ? "100vh" : "45vw";
@@ -133,9 +139,12 @@ const Home = ({ slides, setShowHome }) => {
           </div>
         ))}
       </div>
-      <HIW></HIW>
-
-      <Contact></Contact>
+      <div data-aos="fade-up">
+        <HIW></HIW>
+      </div>
+      <div data-aos="fade-right">
+        <Contact></Contact>
+      </div>
     </>
   ) : null;
 };

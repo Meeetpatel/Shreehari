@@ -10,8 +10,18 @@ import bg4 from "../Pictures/bg4.jpg";
 import bg5 from "../Pictures/bg5.jpeg";
 import "./styles.css";
 import { Container, Row, Col } from "react-bootstrap";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const HIW = () => {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
+  function getSliderHeight() {
+    const windowWidth = window.innerWidth;
+    return windowWidth <= 768 ? "100vh" : "45vw";
+  }
   const containerStyles = {
     height: "70vh",
     width: "100%",
@@ -39,7 +49,7 @@ const HIW = () => {
             </Row>
           </Container>
         </div>
-        <Container className="process1">
+        <Container data-aos="fade-up" className="process1">
           <Row className="align-items-center">
             <Col xs={12} md={6}>
               <div className="embla" ref={emblaRef}>
@@ -63,7 +73,7 @@ const HIW = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="process1">
+        <Container className="process1" data-aos="flip-left">
           <Row className="align-items-center">
             <Col
               xs={12}
@@ -83,7 +93,7 @@ const HIW = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="process1">
+        <Container data-aos="flip-right" className="process1">
           <Row className="align-items-center">
             <Col xs={12} md={6}>
               <img className="w-100  image" src={bg3} alt="img" />
@@ -98,7 +108,7 @@ const HIW = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="process1">
+        <Container data-aos="fade-right" className="process1">
           <Row className="align-items-center">
             <Col
               xs={12}
@@ -118,7 +128,7 @@ const HIW = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="process1">
+        <Container data-aos="fade-left" className="process1">
           <Row className="align-items-center" style={{ marginBottom: "10%" }}>
             <Col xs={12} md={6}>
               <img className="w-100  image" src={bg5} alt="img" />

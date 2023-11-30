@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
 import img3 from "./images/img3.jpg";
@@ -185,6 +187,11 @@ export default function Gallery() {
     },
   ];
 
+  const Gallery = () => {
+    useEffect(() => {
+      Aos.init({ duration: 2000 });
+    }, []);
+  };
   const [selectedImage, setSelectedImage] = useState("");
   const [model, setModel] = useState(false);
   const openModal = (src) => {
@@ -220,6 +227,7 @@ export default function Gallery() {
             {imageArray.map((image, index) => (
               <div key={index} className="col-lg-4 col-md-6 mb-4">
                 <img
+                  data-aos="fade-up"
                   src={image.src}
                   alt={`Image ${index + 1}`}
                   onClick={() => openModal(image.src)}
